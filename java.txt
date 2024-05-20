@@ -1,0 +1,388 @@
+JAVA:
+-> It is Object Oriented Programming Language
+->It is introduction by Sun MicroSystems in 1996
+->Java is an improved language from c and c++
+->It is also known as web application language
+ 
+Features of web application language:
+1.cross platform/os independency
+2.cross device/device independency
+3.cross network/Network independency
+
+History of Java:
+1990: Sun micro systm was started
+          b programmers started and led by James Gosling
+1991:They started one project called "Green Project".
+         That project is to develop programming language
+         This Language is for sake of electronic device
+1992: Oak Language introduction
+1993: In this year they are promoting totally Oak application.
+1994: Oak been Converted for Web application
+1995: HOT Java Browser was introduced
+1996: Java Language was introduced 
+          JDK->Java Development Kit
+2007: onwords Oracle Corporation
+---------------------------------------------------------------
+Content of java:
+1.core java/java language(coding skills)
+2.Advanced java/web technologies
+ JSP,JDBC,Servlet  (HTML,CSS,JS....),SQL
+   
+	 3-tier architecture
+ front end(HTML) -> [Servelet/jsp]---->[database]
+                     web server    jdbc       db
+3.Java Full Stack
+core java
+adv java
+MVC(Spring boot) framework
+
+4.Android applications
+ (Android Studio)
+--------------------------------
+Contents:
+1.I/O statements
+2.Data types & Variables
+3.Operators
+4.Control Statements[if,loop]
+5.Logic Oriented Programming
+6.String,Math,Date 
+7.Exception Handling
+8.I/O Stream
+9.OOP
+10.Multithreading
+11.Collection & Generics.
+---------------------------------------
+Core java:
+Features:
+->Java is a Case Sensitive Language (Lower Case)
+->It is high level language
+->Java is OOP language
+->Java is compiled & interpreter language
+->Byte code convertion
+->Native code Generation
+->Support of external lanuages
+     java,Html
+     java,xml
+     java,sql
+->It's a Secured & robust programming language
+->It's a Multithreaded programming language
+->Types of user interfaces
+      ->GUI (Graphical User Interface)
+      ->CUI (Character User Interface)
+
+
+Implementation Requirements:
+Hardware Req:
+p2 processor onwards
+4GB RAM onwards
+540 GB harddisk onwards
+
+Software req:
+any os
+JDK 11 (Oracle Corporation)
+after installation of jdk path is to be set
+
+other's s/w's:
+edit plus
+notepad ++
+eclipse
+netbeans
+
+how to develop in online?
+search : GDB compiler for java
+
+how to check java version.
+java --version
+
+Program Development:
+1.write code in
+    filename.java using notepad editor
+2.compile with
+     javac complier
+     javac filename.java
+3.run with
+     java interpreter.
+     java filename
+
+
+jdk architecture:
+diagram
+
+a.java
+	javac
+a.class
+
+byte code
+	java
+java native code
+	jre
+cpu
+-------------------
+java program syntax:
+class classname
+{
+public static void main(String... args){
+statement;
+}
+}
+save: ctrl+s
+compile: javac a.java
+run : java a
+
+classname and filename should be same
+
+Hierarachy of java package:
+java-package 
+ subpackage:
+   lang
+   io
+   util
+   text
+   math
+   date
+   applet
+   awt
+   sql
+   net
+Note:
+java.lang is default imported package
+------------------
+I/O Statement:
+output handling:
+the process of writing/printing some text console.
+
+Method:
+java.lang.System.out.print('hello');
+System.out.println("abcd");
+
+println includes new line
+
+Wap Hello World
+notepad first.java
+
+class first{
+public static void main(String... args){
+System.out.println("hello world");
+}
+}
+
+javac first.java
+java first
+-----------------------
+wap to print world wide web
+
+import static java.lang.System.*;
+class p{
+public static void main(String... nk){
+out.print("world");
+out.print("wide");
+out.print("web");
+}
+}
+--------------------------------
+token means keywords:
+
+Java tokens are keywords :
+abstract
+assert
+boolean
+break
+byte
+case
+catch
+char
+class
+continue
+default
+do
+double
+else
+enum
+extends
+final
+finally
+float
+for
+if
+implements
+import
+instanceof
+int
+interface
+long
+native
+new
+null
+false
+true
+package
+private
+protected
+public
+return
+short
+static
+strictfp
+super
+switch
+synchronized
+this
+throw
+throws
+transient
+try
+void
+voltile
+while
+const
+goto
+-----------------------
+Escape charaters & Escape Machanism:
+Escape charaters:
+\n ->new line
+\t ->tabspace or new horizontal tab
+\b ->backspace
+
+Escape Machanism:
+
+regular    | escap
+\b 		\\b
+\n		\\n
+\t		\\t
+"		\"
+'		\'
+\		\\
+
+package basic;
+/*wap to print
+ "love"
+    'you'
+        \mom\
+*/
+public class b {
+    public static void main(String[] args) {
+ System.err.println(" \"love\"  \n\t \'you\' \n\t\t \\mom\\");       
+    }
+    
+}
+----------------------------------------------
+package basic;
+/*wap to print
+ world 
+        wide 
+                web
+*/
+public class b {
+    public static void main(String[] args) {
+ System.err.println(" world  \n\t wide \n\t\t\b\b\b\b web");       
+    }
+    
+}
+-----------------------------------------
+Data Types:
+data types are have two types:
+1.primitive
+2.non primitive
+---------------------
+Non-Primitive:
+Non-primitive datatypes are collection of object type
+ex:
+String name="Nitish Kumar";
+String address=""
+
+java.lang.String
+->It holds multiple values upto 2GB.
+-------------------------
+Primitive:
+they are types holds one value
+
+primitive: they are 2 types
+1.numeric
+2.non-numeric
+
+Numeric:
+This can be read -ve,+ve,int,float.
+
+Datatype	purpose		range	no.of bytes
+byte	   it hold very small	-128 to  1byte
+		int value	+127
+short 	   medium int value     +_32k     2byte
+int		huge int vale    +_ 214k  4byte
+long	very huge val		processor  8byte
+float       floating val	7decimals   4byte
+double       floating no's       15decimals  8byte
+
+note: 
+java default integer type is int
+java default floating type is double
+
+-----------------------------------------
+non -numeric:
+char:
+it holds 1 char
+storage capacity is 1 byte
+
+boolean:
+it holds either true or false
+storage capacity is 1 bit.
+-----------------------------------
+class a{
+public static void main(String args[]){
+byte b=90;
+short s=32000;
+int i=123456789;
+long l=123456789;  //long constant
+long l1=1234567890123456L; //long constant
+float f=12;  //float constant
+float f1=14.4f; //float constant
+double d=45.45;
+char c='A';
+String str="word or para...";
+
+System.out.println("byte : "+b+"\nshort : "+s+"\nint : "+i+"\nlong : "+l+"\nlong1 : "+l1+"\nfloat : "+f+"\nfloat : "+f1+"\ndouble : "+d+"\nchar : "+c+"\nstring : "+str);
+}
+}
+--------------------------------------
+variable:
+a user name temporary stroage location of RAM.
+Feature:
+it should be declared first 
+it never be a reserved word
+it can contain alphabets,numbers,special characters(_,$)
+first character never be a digit.
+
+variable initialization & declaration:
+int x;
+int x,y;
+String name="nitish"
+float op1=10.3f;
+
+valid :
+a
+a1
+a_b
+a_
+
+invalid:
+1a
+a b
+^a
+$a
+-----------------
+class a{
+public static void main(String args[]){
+int a=1;
+int a_b=2;
+int a_=3;
+int _a=4;
+int a1=5;
+int a$=6;
+System.out.println(a+" "+a_b+" "+a_+" "+_a+" "+a1+" "+a$);
+}
+}
+-----------------------------------
+Input Handling
+
+
+
+
