@@ -381,7 +381,428 @@ System.out.println(a+" "+a_b+" "+a_+" "+_a+" "+a1+" "+a$);
 }
 }
 -----------------------------------
-Input Handling
+Input Handling:
+The process of reading set of characters from keyboard
+1.java.lang.System.in
+This Object represents input device 
+2.java.util.Scanner
+
+Scanner:
+This class object reads flow of characters from keyboard
+
+usage:
+import java.util.Scanner;
+
+create Scanner Object:
+Scanner sc=new Scanner(System.in);
+
+new operator:
+it allocates the memory dynamically .
+
+Methods:
+int n=sc.nextInt();
+float n=sc.nextFloat();
+double n=sc.nextDouble();
+long n=sc.nextLong();
+String s=sc.next();  //one word
+String s=sc.nexrLine();  //multiple words
+
+//wap to read your name & print with  Hello : xxxxx
+import static java.lang.System.*;
+import java.util.Scanner;
+class a{
+public static void main(String... args){
+Scanner sc=new Scanner(in);
+out.print("Enter name : ");
+String name=sc.nextLine();
+System.out.println("Hello : "+name);
+}
+}
+--------------
+1.wap to read 2 integers and print their sum
+2.wap to read 3 strings join together and display as concatination string.
+----------------------
+Operators:
+1.Arithmatic Ops  +,-,*,/,%
+2.Relational or comparision Ops  >, < ,>=,<=,==,!=
+3.Logical Ops &&,||,!
+4.Assignment Ops =,+=,-=,/=,
+5.uniary Ops ++,--
+6.Bitwise Ops &,|,^,~
+7.Shift Ops  >>,<<
+8.Terinary Ops  ? :
+
+Arithmatic Ops:
+wap to read length & breadth of rectangle print its area & perimeter.
+
+import java.util.Scanner;
+class a{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter length : ");
+int l=sc.nextInt();
+System.out.print("Enter breadth : ");
+int b=sc.nextInt();
+int a=l*b;
+int p=2*(l+b);
+System.out.println("area of rect : "+a+"\nperi of rect : "+p);
+}
+}
+-------------------------------
+wap to read side of a square print its area & perimeter.
+import java.util.Scanner;
+class a{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter side : ");
+int s=sc.nextInt();
+int a=s*s;
+int p=4*s;
+System.out.println("area of sqr : "+a+"\nperi of sqr : "+p);
+}
+}
+---------------------------------------------------
+wap to read radius of a circle, print its area & perimeter.
+wap for PTR, and Compute SI
+import java.util.Scanner;
+class a{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter pri amo : ");
+int p=sc.nextInt();
+System.out.print("Enter time : ");
+int t=sc.nextInt();
+System.out.print("Enter R of I : ");
+int r=sc.nextInt();
+
+int si=(p*t*r)/100;
+
+System.out.println("SI Amount : "+si);
+}
+}
+-------------------------------
+Relational ops:
+import java.util.Scanner;
+class a{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int a=5;
+int b=2;
+System.out.println(a>b);
+System.out.println(a<b);
+System.out.println(a<=b);
+System.out.println(a>=b);
+System.out.println(a==b);
+System.out.println(a!=b);
+}
+}
+-----------------------------
+Assignment Ops:
+=,+=,-=,/=
+import java.util.Scanner;
+class a{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int a=2;
+int b=3;
+a+=b; //2+=3
+System.out.println(a); //5
+a*=b; //5*=3
+System.out.println(a); //15
+a-=b;//15-=3
+System.out.println(a); //12
+}
+}
+-----------------------------
+uniary Ops ++,--
+pre increment  ++a
+post increment  a++
+pre decrement   --a
+post decrement   a--
+
+import java.util.Scanner;
+class a{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int a=2,b=9,c=5,d=7;
+//post increment
+System.out.println(a++);
+System.out.println(a);
+//post decrement
+System.out.println(b--);
+System.out.println(b);
+//pre increment
+System.out.println(++c);
+//pre decrement
+System.out.println(--d);
+}
+}
+-----------------
+Logical Ops 
+&& ->logical and,
+|| ->logical or,
+!  ->logical not or not
+
+Not(!):
+!True=False
+!False=True
+
+class a{
+public static void main(String args[]){
+int a=5,b=7;
+System.out.println(!(a==b));
+}
+}
+--------------------
+logical and (&&) :
+1-> true
+0-> false
+c1	c2	result
+1	 1	  1
+0	 1	  0
+1	 0	  0
+0 	 0	  0
+
+class a{
+public static void main(String args[]){
+int a=2,b=3;
+System.out.println((a!=b)&&(a<b));
+}
+}
+----------------------
+logical or (||) :
+1-> true
+0-> false
+c1	c2	result
+1	 1	  1
+0	 1	  1
+1	 0	  1
+0 	 0	  0
+
+class a{
+public static void main(String args[]){
+int a=2,b=3;
+System.out.println((a==b)||(a<b));
+}
+}
+-----------------------------
+Bitwise Ops:
+ &->Bitwise and,
+ |->Bitwise or,
+ ^->Bitwise Xor,
+ ~->one complem... or tilde
+
+^ :
+a-b or b-a 
+we can't consider -ve values.
+
+~:
+ -ve :+ve-1
+ +ve :-ve-1
+
+c=5
+5:-5-1
+ :-6
+
+-9:9-1
+  :8
+
+2-0010
+3-0011
+--------
+  0010 ->2  &
+  0011 ->3  |
+  0001 ->1  ^
+
+class a{
+public static void main(String args[]){
+int a=2;//0010
+int b=3;//0011
+int c=5;
+int d=-9;
+System.out.println(a&b);
+System.out.println(a|b);
+System.out.println(a^b);
+System.out.println(~c);
+System.out.println(~d);
+
+
+}
+}
+---------------------------
+Shift Ops :
+ >> -> right shift,
+ << -> left shift
+
+class a{
+public static void main(String args[]){
+int a=7;//0111
+System.out.println(a<<1);
+System.out.println(a<<2);
+System.out.println(a>>1);
+System.out.println(a>>2);
+
+
+}
+}
+---------------------
+Terinary Ops :
+? :
+syntax:
+(cond)?True:False;
+
+i need to found it big no.
+
+class a{
+public static void main(String args[]){
+int a=30,b=8,big;
+big=(a>b)?a:b;
+System.out.println(big);
+}
+}
+
+---------------------------
+control statement:
+there are two types of control statements:
+1.condition
+2.Iterative
+
+Condition control statement:
+1.If
+2.switch case
+
+If : it's widly used for control statement. It contain several forms
+
+1.simple if: if else
+2.block if: if
+3.multi conditional : if else if ...
+4.nested if : if ... if
+
+simple if:
+syntax:
+if(condition)
+{
+
+ ......
+}
+else{
+......
+}
+
+//wap to read two numbers and print biggest number:
+class a{
+public static void main(String args[]){
+int a=88,b=133;
+if(a>b){
+System.out.println("a is Biggest no : "+a);
+ }
+else{
+System.out.println("b is Biggest no : "+b);
+
+ }
+}
+}
+
+-----------------------
+//wap to read a number and test for even or odd num .
+//wap to read year and test leap year or not?
+//wap a num and test it common multiple of 3 and 5 (use &&)
+
+multi conditional and if control statement:
+if else if
+
+syntax:
+if(condition1){
+...
+}
+else if(cond2){
+....
+}
+else if(cond3){
+.....
+}
+..........
+else if(cond N){
+....
+}
+else{
+.......
+}
+-----------
+code 1 :
+wap to read three numb and print biggest number.
+class a{
+public static void main(String args[]){
+int a=188,b=133,c=212;
+if(a>b){
+System.out.println("a is Biggest no : "+a);
+ }
+else if(b>c){
+System.out.println("b is Biggest no : "+b);
+ }
+else if(a>c){
+System.out.println("a is Biggest no : "+a);
+}
+else{
+System.out.println("c is Biggest no : "+c);
+}
+}
+}
+--------------
+code 2:
+class a{
+public static void main(String args[]){
+int a=188,b=133,c=212;
+if(a>b && a>c){
+System.out.println("a is Biggest no : "+a);
+ }
+else if(b>c){
+System.out.println("b is Biggest no : "+b);
+ }
+else{
+System.out.println("c is Biggest no : "+c);
+}
+}
+}
+--------------------------
+student marks and assign/print grade based on marks range
+91-100 - A
+81-90 -B
+71- 80 -c
+other wise - P
+--------------------
+ascii values:
+A=65  a=97  0=48
+Z=90  z=122 9=57
+----------------------
+class a{
+public static void main(String... args){
+char c='B';
+if(c>=65 && c<=90){
+System.out.println("upper case "+c);
+}
+else if(c>=97 && c<=122){
+System.out.println("lower case "+c);
+}
+else if(c>=48 && c<=57){
+System.out.println("numeric "+c);
+}
+else{
+System.out.println("Special chara " +c);
+}
+}
+}
+----------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
