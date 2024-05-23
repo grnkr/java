@@ -793,6 +793,150 @@ System.out.println("Special chara " +c);
 }
 }
 ----------------------------------------
+block if:
+syntax:
+if(condition){
+statement;
+}
+
+class a{
+public static void main(String... args){
+int n=2;
+if(n%3==0){
+System.out.println("multiple with 3");
+}
+}
+}
+-------------------
+nested if:
+syntax:
+if(condition outer){
+if(cond inner){
+  st;
+}
+else{
+st;  
+} //inner
+}
+else{
+st;
+}
+
+code:
+class a{
+public static void main(String... args){
+char n='8';
+if((n>=65 && n<=90) || (n>=97 && n<=122))
+{
+  if(n>=65 && n<=90)
+   {
+     System.out.println("this is upper case");
+    }
+   else{
+      System.out.println("this is lower case");
+      }
+}
+else{
+System.out.println("this is special chara");
+
+}
+}
+}
+-----------------------------------
+looping or iterative:
+for loop
+while loop     //init ; cond; ++/--
+do-while
+
+for loop:
+syntax:
+for(init;cond;++/--){
+st;
+}
+
+wap to print 1 to 10
+class a{
+public static void main(String... args){
+for(int i=1;i<=10;i++){
+System.out.print(i+" ");
+}
+}
+}
+-------------------
+wap to print 10 to 1
+class a{
+public static void main(String... args){
+for(int i=10;i>=1;i--){
+System.out.print(i+" ");
+}
+}
+}
+---------------
+wap to print A to Z
+class a{
+public static void main(String... args){
+for(int i=65;i<=90;i++){
+System.out.print((char)i+" ");
+}
+}
+}
+--------------------------------------------
+wap to print Z to A
+wap to print a to z
+wap to print z to a
+------------------------
+while loop:
+syntax:
+init;
+while(cond){
+st;
+++/--;
+}
+-------------------
+wap to print 100 to 90
+class a{
+public static void main(String... args){
+int i=100;
+while(i>=90){
+System.out.print(i+"  ");
+i=i-1;
+}
+}
+}
+------------------
+do-while:
+syntax:
+do{
+st;
+++/--;
+}while(cond);
+
+code: 
+wap to print 15 to 50
+class a{
+public static void main(String... args){
+int i=15;
+do{
+System.out.print(i+"  ");
+i=i+1;
+}while(i<=50);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
