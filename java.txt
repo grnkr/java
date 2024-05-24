@@ -922,13 +922,165 @@ i=i+1;
 }while(i<=50);
 }
 }
+----------
+class a{
+public static void main(String... args){
+int i=65;
+do{
+System.out.print((char)i+" ");
+i=i+1;
+}while(i<=90);
+}
+}
+------------------
+control flow statements:
+1.break
+2.continue
+3.switch case
+4.System.exit(0)
 
+1.break:
+class a{
+public static void main(String... args){
+int i=65;
+do{
+System.out.println(i+" ");
+i=i+1;
+break;
+}while(i<=90);
+}
+}
+---------------
+//wap to print 1 to 10 but i need to stop 7 number
+class a{
+public static void main(String... args){
+int i=1;
+while(i<=10){
+if(i==7)
+break;
+System.out.print(i+" ");
+i=i+1;
+}
+}
+}
+-------------------------
+continue:
+//wap to print 1 to 10 but i need to stop 7 number
+class a{
+public static void main(String... args){
+for(int i=1;i<=10;i++){
+if(i==5)
+continue;
+System.out.print(i+" ");
+}
+}
+}
+---------------
+System.exit(0):
+//wap to print 1 to 10 but i need to stop 7 number
+class a{
+public static void main(String... args){
+System.out.println(11);
+System.out.println(12);
+System.out.println(13);
+System.out.println(14);
+System.exit(0);
+System.out.println(15);
+System.out.println(16);
+System.out.println(17);
+System.out.println(18);
 
+}
+}
+--------------------------------
+Switch case():
+-------------
+syntax:
+switch case(vari)
+{
+case 1: st;
+break;
+case 2: st;
+break;
+case 3: st;
+break;
+case 4: st;
+break;
+..........
+case N: st;
+break;
+default: st;
+break;
+}
 
+code:
+class a{
+public static void main(String... args){
+int i=5;
+switch(i){
+case 1: System.out.println("Java");
+break;
+case 2: System.out.println("Python");
+break;
+case 3: System.out.println("PHP");
+break;
+default:System.out.println("choose correct option 1 to 3");
+break;
+}
+}
+}
+------------
+nested for loop:
+syntax:
+for(init;cond;++/--) -> outerloop 
+{
+for(init;cond;++/--) -> innerloop 
+{
+st;
+}
+}
+wap to print
+11111
+22222
+33333
+44444
+55555
 
+class a{
+public static void main(String... args){
+int i,j;                              
+for(i=1;i<=5;i++)       
+{                       
+for(j=1;j<=5;j++) 
+{
+System.out.print(i);
+}
+System.out.print("\n");
 
+}
+}
+}
+----------
+wap to print
+12345
+12345
+12345
+12345
+12345
+class a{
+public static void main(String... args){
+int i,j;                              
+for(i=1;i<=5;i++)       
+{                       
+for(j=1;j<=5;j++) 
+{
+System.out.print(j);
+}
+System.out.print("\n");
 
-
+}
+}
+}
 
 
 
