@@ -1673,16 +1673,187 @@ System.out.println("different");
 }
 }
 }
+-----------------------------------------
+st1.compareto(st2):
+==  0
+>   0
+<   0
+st1==st2
+st1>st2
+st2>st1
 
+This method compare both the string and returns as 0,>0,<0
 
+#wap to read two strings and print biggest string.
+import java.util.Scanner;
 
+class a {
+public static void main(String args[]) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter two strings: ");
+String st1, st2;
+st1 = sc.next();
+st2 = sc.next();
+if (st1.compareTo(st2) > 0) {
+ System.out.println(st1 + " comes first.");
+ } 
+else if (st1.compareTo(st2) < 0) {
+System.out.println(st2 + " comes first .");
+}
+else if(st1.compareTo(st2)==0){
+System.out.println("Both strings are the same.");
+} 
+else {
+System.out.println("invalid.");
+        }
+    }
+}
+--------------------------
+partial string comparision:
+1.st.endsWith(par);
+2.st.stratsWith(par);
+3.st.indexOf(par);
 
+It returns its position is found 0 otherwise -1
 
+wap to read emailid  print as valid id is it ends with com and it must contain @ character.
+import java.util.Scanner;
 
+class a {
+public static void main(String args[]) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter emailid : ");
+String st1;
+st1 = sc.next();
+if(st1.endsWith(".com")) {
+ System.out.println(" valid");
+ }  
+else {
+System.out.println("invalid.");
+        }
+    }
+}
+----------------------------
+startsWith:
+import java.util.Scanner;
 
+class a {
+public static void main(String args[]) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter vech no : ");
+String st1;
+st1 = sc.next();
+if(st1.startsWith("AP16")) {
+ System.out.println("valid");
+ }  
+else {
+System.out.println("invalid.");
+        }
+    }
+}
+----------------
+indexOf:
+import java.util.Scanner;
 
+class a {
+public static void main(String args[]) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter vech no : ");
+String st1;
+st1 = sc.next();
+System.out.println(st1.indexOf('a'));
+}
+}
+------------------------------
+Partial String/sub string:
+st.charAt(i);
+it returns the character at given index.
+st.SubString(p1,p2);
+It returns,partial string between p1 & p2 by excluding p2
+ex:
+st="wlecome";
+st.charAt(0);
+st.SubString(0,3);
 
+wap to print one by one character of your name
+import java.util.Scanner;
+class a{
+public static void main(String... args){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter name : ");
+String name=sc.next();
+for(int i=0;i<name.length();i++)
+System.out.println(name.charAt(i) +" -> "+i);
+System.out.print(name.substring(3,5));
+}
+}
+-----------------------------
+string replace:
+st.replace(old,new)
 
+code:
+
+import java.util.Scanner;
+class a{
+public static void main(String... args){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter name : ");
+String name=sc.next();
+System.out.print(name.replace("j","bl"));
+}
+}
+---------------------
+string tokenisation:
+
+The processs of splitting a string into small pieces(tokens) with any characters as superator.
+ex:
+String st="world wide web"
+String words[]=st.split(" ");
+System.out.println(words.length);
+
+code:
+import java.util.Scanner;
+class a{
+public static void main(String... args){
+String st="127/0/0/1";
+String words[]=st.split("/");
+System.out.println(st);
+System.out.println(words.length);}
+}
+--------------------
+String reverse:
+java.lang.StringBuffer/Builder:
+this object represent varied String.
+
+input:abc
+output:cba
+
+input:nitish
+output:hsitin
+
+code :
+import java.util.Scanner;
+class a{
+public static void main(String... args){
+Scanner sc =new Scanner(System.in);
+System.out.print("enter string : " );
+String st=sc.next();
+String re="";
+System.out.println("original string : " + st);
+for(int i=0;i<st.length();i++){
+char ch=st.charAt(i);
+ re=ch+re;
+}
+System.out.println("Reversed string: "+re);
+
+}
+}
+-------------------
+Manipulations of string buffer:
+1.append()
+2.delete()
+3.insert()
+4.reverse()
 
 
 
