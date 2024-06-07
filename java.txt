@@ -1855,16 +1855,236 @@ Manipulations of string buffer:
 3.insert()
 4.reverse()
 
+code:
+class a{
+public static void main(String... args){
+StringBuffer sb1=new StringBuffer("web");
+System.out.println(sb1);
+sb1.append(" server");
+System.out.println(sb1);
+sb1.insert(3," logic");
+System.out.println(sb1);
+sb1.delete(0,3);
+System.out.println(sb1);
+sb1.reverse();
+System.out.println(sb1);
+}
+}
+--------------
+Math Logic:
+java.lang.math:
+   ->This class contains several mathematical methods.
 
+code :
+class a{
+public static void main(String... args){
+System.out.println(Math.PI);
+System.out.println(Math.E);
+System.out.println(Math.sqrt(25));
+System.out.println(Math.abs(-11));
+System.out.println(Math.abs(99));
+System.out.println(Math.pow(2,3));
+System.out.println(Math.sin(90));
+System.out.println(Math.sinh(90));
+System.out.println(Math.log(2));
+System.out.println(Math.exp(1));
+System.out.println(Math.asin(90));
+System.out.println(Math.toDegrees(0.017));//rad val
+System.out.println(Math.toRadians(1)); //deg val
 
+}
+}
+--------------------
+Date Logic:
+java.util.Date():
+->this class object  represent current date and time.
 
+usage:
+import java.util.Date;
+create object:
+Date dt=new Date(); //current date and time
 
+code :
+wap to print current date and time.
+import java.util.Date;
+class a{
+public static void main(String... args){
+Date dt=new Date();
+System.out.println(dt.toString());
 
+}
+}
+------
+Get attributes of the Date:
+dt.getDate()->dd(1-31)
+dt.getMonth() ->mm(0-11)
+dt.getYear() ->YYYY
+dt.getHours() ->0-23 -HH
+dt.getMinutes() ->(0-59) mi
+dt.getSeconds() ->(0-59) ss
 
+code:
+import java.util.Date;
+class a{
+public static void main(String... args){
+Date dt=new Date();
+int hours=dt.getHours();
+if(hours>=9 && hours<=17)
+{
+System.out.println("login succes");
+}
+else{
+System.out.println("login fail");
 
+}
+}
+}
+-----------
+Formatting Date content:
+java.text.SimpleDateFormat;
+->this class object converts javas date to any required date format
 
+ex:
+wap to print current Date in oracles dat formate
+import java.util.Date;
+import java.text.SimpleDateFormat;
+class a{
+public static void main(String... args){
+Date dt=new Date();
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY");
+System.out.println(sdf.format(dt));
+}
+}
+------------
+OOPs:
+Object Oriented Programming:-
 
+Programming:
+1.Functional -> c 
+2.OOPs -> c++,java,c#.net,python
 
+- small taks,simula 97, ada ->Java Overcomes the drawbacks in the programming language
 
+-vc++ (oops,GUI)
+-java (oops,web,gui)
+-c#.net 
+-python 
 
+Overview of oops:
+->Three features are known as oops concepts
+1.Encapsulation  -class,objects
+2.Polymorphism   - overloading,overriding
+3.Inheritance    - single,multi.....
+
+Encapsulation:
+The process of hiding and belongingness of the data to object level.
+
+Implementation Requirements:
+1.class
+2.object
+
+Class (Data abstraction):
+a class is a collection of data members and methods
+
+ex:
+class a{
+int z; //data members
+void a() //data methods
+{
+st;
+}
+}
+--------
+class is an abstract (whose object is to be created)
+
+Types of classes:
+simple class
+static class
+super class
+sub class
+abstract class
+final class
+
+how to define class:
+class xxxxxx
+{
+//data members
+
+//data methods
+}
+
+Define a class for sqr pattern
+class sqr
+{
+int s=90;
+void area(){
+System.out.println(s*s);
+}
+}
+---------
+Object:
+It is an instance of the class
+classname obj1,obj2;
+
+creation of the objects:
+1. 2step construction:
+ ->declare obj
+    sqr s1;
+ ->allocate memory 
+    s1=new sqr();  //dynamic obj instance
+
+2. 1step construction:
+  sqr s1= new sqr();
+ 
+Access the members of objects
+with . (belonging operator)
+
+Define a class for circle pattern with necessary attributes and logic
+class cricle
+{
+int r=6;
+void area(){
+System.out.println(3.14*r*r);
+}
+}
+class a{
+public static void main(String... args){
+cricle c1=new cricle();
+c1.area();
+}
+}
+--------------------------
+Scope modifier/Data Hiding:
+Every member of the class should be defined with access scope modifier
+
+Types of scope modifiers:
+private
+default
+public
+protected
+
+1.private:
+It is  accessible in self class is will not be accessable at out side of the class.
+
+2.Default:
+It's a default scope modifier
+No such  reserved word.
+It is accessible to
+->self class
+->sub class
+->other class   of same path or package
+
+3.protected:
+It is accesible to same packaged classes,sub classes of other packages
+
+4.public:
+It is accesible to any where that is same packaged classes & other packaged classes.
+
+Data Hiding:
+The process of hiding data members and accessing these data members with public method.
+
+Declare private data members:
+private int id;
+
+Manipulate with Setter and Getter methods:
 
