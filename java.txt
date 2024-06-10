@@ -2087,4 +2087,127 @@ Declare private data members:
 private int id;
 
 Manipulate with Setter and Getter methods:
+Setter: 
+This is to assign value to private data member of a class.
+
+Getter:
+This is to get the value from private data memeber of a class.
+
+ex:
+class product
+{
+private int pid;
+private String pname;
+public void setpid(int pid)
+{
+this.pid =pid;
+}
+public void setpname(String pname){
+this.pname=pname;
+}
+int getpid()
+{
+return pid;
+}
+String getpname(){
+return pname;
+}
+}
+class a{
+public static void main(String[] args)
+{
+product p1=new product();
+product p2=new product();
+p1.setpid(1212);
+p1.setpname("mobile");
+p2.setpid(1213);
+p2.setpname("TV");
+System.out.println("Product ID \t Product Name " );
+System.out.println( p1.getpid()+"\t\t\t" + p1.getpname());
+System.out.println( p2.getpid()+ "\t\t\t" + p2.getpname());
+}
+}
+-----------------------
+logic methods:
+This methods includes business logic
+1.Math/computational
+2.Validation
+3.Business logic
+4.db logic
+5.file logic
+ ..... etc.
+
+Define a class for a logic task with id,pwd as datamembers and a validation method 
+id-> System, pwd -> manager
+
+class login
+{
+private String id,pwd;
+
+public void setId(String id)
+{
+this.id=id;
+}
+void setpwd(String pwd){
+this.pwd=pwd;
+}
+void validate(){
+if(id.equals("System") && pwd.equals("manager")){
+System.out.println("success");
+}
+else{
+System.out.println("unsuccess");
+}
+}
+}
+class a{
+public static void main(String[] args){
+login l=new login();
+l.setId("System");
+l.setpwd("manager");
+l.validate();
+}
+}
+--------------
+Wap to define a class for simple interset computation.
+
+Constructers:
+3
+Finalizer:
+Functional Modifier:
+2 static , non-static
+
+collections:
+arrays 
+
+polymorphism:
+2
+
+Inheritance:
+5
+
+super keyword:
+final modifier:
+final method:
+final class
+
+Interfaces:
+
+abstract class:
+
+multithreading
+
+extends
+
+
+
+
+
+
+
+
+
+
+
+
 
