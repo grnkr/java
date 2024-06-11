@@ -2172,8 +2172,120 @@ l.validate();
 Wap to define a class for simple interset computation.
 
 Constructers:
-3
+It's a member function, that executes when an object is created.
+
+Need of constructer:
+This is to perform first time/ default/ initialization task.
+
+Definition rules of the constructor:
+->class name & constructer name should be same
+->It never return value.
+->It can be overloaded(more than one constructer is allowed.)
+->It never be called with notation.
+->It gets executed at the time of object creation.
+
+Types of constructer:
+1.Default constructer
+2.Parametrized constructer
+3.Copy constructer
+
+1.Default constructure:
+It's a constructer member function without arguments.
+Used to initialize an object with default properties.
+ex:
+class rect{
+private int l,b;
+rect()
+{
+l=10;
+b=20;
+}
+}
+
+call default constructer
+rect r1=new rect();
+
+2.Parameterized constructor:
+It's a constructer member function defined with arguments/parameters.
+->used to initialize an object with client preferences(parameter)
+
+3.Copy constructer:
+It's a constructer member function defined with self class object as argument
+Used to copy new object with existing object properties.
+
+Define a class with 3 forms of constructers.
+class Button
+{
+private int width,height;
+
+//default constructer
+Button(){
+this.width=100;
+this.height=20;
+}
+
+//parameterized constructer
+Button(int w,int h)
+{
+this.width=w;
+this.height=h;
+}
+
+Button(Button obj)
+{
+this.width=obj.width;
+this.height=obj.height;
+}
+void showsize()
+{
+System.out.println(width+" , "+height);
+}
+}
+class a{
+public static void main(String[] args){
+Button b1=new Button();
+Button b2=new Button(20,40);
+Button b3=new Button(b2);
+b1.showsize();
+b2.showsize();
+b3.showsize();
+}
+}
+-------------------------
+Notes:
+Java System maintain an implicit default constructer in a class in which no explicit constructer definition.
+---------------------------
 Finalizer:
+It's a member function that executes when an object is destroyed.
+
+Need:
+To perform finalyzation task.
+ex:
+1.closing files
+2.resource releasing
+3.disconnection.
+Java doen't support explitit finalyzer.
+
+java.lang.object:
+It acts as an invisible super class for all java's classes.
+
+Nested class:
+A class inside of another class
+One class is known as outer class and
+Other class is known as inner class.
+
+Usage:
+class class_name <- outer 
+{
+---------
+------------
+-----------
+class class_name   <- inner
+{
+
+}
+}
+-----------------------
 Functional Modifier:
 2 static , non-static
 
