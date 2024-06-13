@@ -2285,12 +2285,98 @@ class class_name   <- inner
 
 }
 }
+----------------
+Features of Nested class:
+1.outer class members are refered into inner class
+2.outer class can refer inner class  members in the form of object only.
+3.client application can create outer class object and it cann't create inner class object
+4.Inner classes are also known as Hidden class.
+
+container class:
+The class that contains object as data members of other class.
+eg:
+class Book
+{
+.....
+}
+class member
+{
+.....
+}
+class issuses //container
+{
+Book b1=new Book();
+member m1 = new member();
+.......
+}
 -----------------------
 Functional Modifier:
-2 static , non-static
+This modifer represents belongingness.
+The member of the class are defined with functional modifier.
+There are 2 types of functional modifier:
+1.Static
+2.Non-Static
 
+code:
+class a{
+static int b=10;
+int c=77;
+public static void main(String[] args){
+a r=new a();
+int z=5;
+System.out.println(z);
+System.out.println(b);
+System.out.println(r.c);
+
+}
+}
+--------
+Static:
+It's a class belonging modifier that doesn't require object.
+
+Non-Static:
+It's a default modifier No such reserved word
+It represent object belonging
+
+eg:
+class z
+{
+void fun1() // non static
+{
+System.out.println("obj call");
+}
+static void fun2() //static
+{
+System.out.println("class call");
+}
+}
+class a{
+public static void main(String[] args){
+
+z.fun2();
+new z().fun1(); 
+}
+}
+-----------
 collections:
-arrays 
+arrays:Arrary is a collection of elements
+
+Single Dimensional Arrays:
+int a=5,b=10,c=20,...........
+
+dt array_name[]={e1,e2,e3,.......}-> array
+[]->size
+ex:
+class a{
+public static void main(String[] args){
+int z[]={99,88,77,1,4,7,44};
+System.out.println(z[1]);
+System.out.println(z[7-3]);
+}
+}
+-----------
+Two Dimensional Arrays:
+
 
 polymorphism:
 2
@@ -2310,6 +2396,45 @@ abstract class:
 multithreading
 
 extends
+
+
+
+--------------------
+Streams and File I/O :
+the classes object output stream and object input streams to read and write class objects with binary files.
+
+I/O=input/output
+In this context it is input and output from program
+Input can be from keyboard or a file
+Output can be to display (screen) or a file
+Advantages of file I/O:
+  permanent copy
+  output from one program can be input to another
+  input can be automated(rather than entered manually)
+
+Stream an object that either delivers data to its destination(screen,files,etc)
+or that takes data from a source (keyboard,file,etc.)
+
+->It acts as a buffer between the data source and destination .
+
+Input Stream: a stream that provides input to a program.
+->System in is an input Stream
+
+Output Stream: a stream that accepts output from a program.
+->System out is an output Stream.
+
+A stream connects a program to an I/O object:
+System out connects is a program to the screen.
+System in connects is a program to the keyboard
+
+
+
+
+
+
+
+
+
 
 
 
